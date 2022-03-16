@@ -7,9 +7,10 @@ public class testcontrol : MonoBehaviour
     void Update()
     {
         //Detect if the right mouse button is pressed
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse 1");
+            //Debug.Log("did something");
+            Destroy(gameObject);
         }
     }
 }

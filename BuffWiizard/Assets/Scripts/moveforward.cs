@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class moveforward : MonoBehaviour
 {
-
+    GameObject enemy;
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -16,12 +16,17 @@ public class moveforward : MonoBehaviour
         transform.position += transform.forward * Time.deltaTime;
     }
 
-    void fireball()
+    void destroytest()
     {
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetMouseButtonDown(0) && GameObject.Find("enemy"))
         {
-            Destroy(enemy_test);
-            Debug.Log("DESTROYED!");
+            // Destroy(gameObject);
+            // Debug.Log("DESTROYED!");
+            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //RaycastHit hit;
+            // Casts the ray and get the first game object hit
+            //Physics.Raycast(ray, out hit);
+            //Destroy(gameObject);
         }
     }
 
