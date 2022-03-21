@@ -16,9 +16,16 @@ public class VoiceCommand : MonoBehaviour
         actions.Add("lightning", lightning);
         actions.Add("flex", flex);
         actions.Add("headbutt", headbutt);
+        actions.Add("Yes", Yes);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
+        keywordRecognizer.Start();
+    }
+
+    public void Yes()
+    {
+        Debug.Log("YES!YES!!YES!!!");
     }
 
     public void RecognizedSpeech(PhraseRecognizedEventArgs speech)
