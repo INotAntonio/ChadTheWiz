@@ -9,23 +9,21 @@ public class VoiceCommand : MonoBehaviour
 {
     private KeywordRecognizer keywordRecognizer;
     private Dictionary<string, Action> actions = new Dictionary<string, Action>();
+    // public GameObject enemy;
+
+    public projectileBehaviour ProjectilePrefab;
+    public Transform LaunchOffSet;
 
     public void Start()
     {
         actions.Add("fireball", fireball);
         actions.Add("lightning", lightning);
-        actions.Add("flex", flex);
-        actions.Add("headbutt", headbutt);
-        actions.Add("Yes", Yes);
+        actions.Add("punch", flex);
+        actions.Add("kick", headbutt);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
         keywordRecognizer.Start();
-    }
-
-    public void Yes()
-    {
-        Debug.Log("YES!YES!!YES!!!");
     }
 
     public void RecognizedSpeech(PhraseRecognizedEventArgs speech)
@@ -34,9 +32,12 @@ public class VoiceCommand : MonoBehaviour
         actions[speech.text].Invoke();
     }
 
+    
+
     public void fireball()
     {
-        Debug.Log("FIREBALL!!!");
+        //Debug.Log("FIREBALL!!!");
+        Instantiate(ProjectilePrefab, LaunchOffSet.position, transform.rotation);
     }
 
     public void lightning()
@@ -53,4 +54,12 @@ public class VoiceCommand : MonoBehaviour
     {
         Debug.Log("HEADBUTT!!");
     }
+
+    /*private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Instantiate(ProjectilePrefab, LaunchOffSet.position, transform.rotation);
+        }
+    }*/
 }

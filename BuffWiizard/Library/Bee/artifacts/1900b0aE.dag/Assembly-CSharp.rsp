@@ -331,9 +331,10 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/moveVoice.cs"
+"Assets/Scripts/healthbarBehaviour.cs"
 "Assets/Scripts/moveforward.cs"
-"Assets/Scripts/testcontrol.cs"
+"Assets/Scripts/moveVoice.cs"
+"Assets/Scripts/projectileBehaviour.cs"
 "Assets/Scripts/VoiceCommand.cs"
 -langversion:9.0
 

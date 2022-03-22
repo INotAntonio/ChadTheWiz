@@ -4,29 +4,21 @@ using UnityEngine;
 
 public class moveforward : MonoBehaviour
 {
-    GameObject enemy;
+
+    public float Hitpoints;
+    public float MaxHitpoints = 2;
 
     void Start()
     {
-
+        Hitpoints = MaxHitpoints;
     }
 
-    void Update()
+    public void TakeHit(float damage)
     {
-        transform.position += transform.forward * Time.deltaTime;
-    }
-
-    void destroytest()
-    {
-        if (Input.GetMouseButtonDown(0) && GameObject.Find("enemy"))
+        Hitpoints -= damage;
+        if (Hitpoints <= 0)
         {
-            // Destroy(gameObject);
-            // Debug.Log("DESTROYED!");
-            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //RaycastHit hit;
-            // Casts the ray and get the first game object hit
-            //Physics.Raycast(ray, out hit);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 
