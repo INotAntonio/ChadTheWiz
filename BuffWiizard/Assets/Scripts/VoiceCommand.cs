@@ -19,7 +19,7 @@ public class VoiceCommand : MonoBehaviour
 
     public void Start()
     {
-        actions.Add("fireball", fireball);
+        actions.Add("fire", fireball);
         //actions.Add("lightning", lightning);
         actions.Add("punch", flex);
         actions.Add("kick", headbutt);

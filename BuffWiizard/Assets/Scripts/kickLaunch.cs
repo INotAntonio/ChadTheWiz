@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class kickLaunch : MonoBehaviour
 {
-    public float Speed = 5f;
+    //public float Speed = 5f;
 
     void Update()
     {
