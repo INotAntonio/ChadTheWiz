@@ -5,6 +5,7 @@ using UnityEngine;
 public class moveforward : MonoBehaviour
 {
 
+    public float speed;
     public float Hitpoints;
     public float MaxHitpoints = 2;
 
@@ -20,6 +21,11 @@ public class moveforward : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+        transform.position += new Vector3(-speed, 0, 0);
     }
 
 }

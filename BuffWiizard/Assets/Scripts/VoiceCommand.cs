@@ -14,10 +14,13 @@ public class VoiceCommand : MonoBehaviour
     public projectileBehaviour ProjectilePrefab;
     public Transform LaunchOffSet;
 
+    public kickLaunch kickPrefab;
+    public Transform kickOffSet;
+
     public void Start()
     {
         actions.Add("fireball", fireball);
-        actions.Add("lightning", lightning);
+        //actions.Add("lightning", lightning);
         actions.Add("punch", flex);
         actions.Add("kick", headbutt);
 
@@ -32,18 +35,17 @@ public class VoiceCommand : MonoBehaviour
         actions[speech.text].Invoke();
     }
 
-    
-
     public void fireball()
     {
         //Debug.Log("FIREBALL!!!");
         Instantiate(ProjectilePrefab, LaunchOffSet.position, transform.rotation);
     }
 
-    public void lightning()
+    /*public void lightning()
     {
-        Debug.Log("LIGHTNING BOLT!");
-    }
+        //Debug.Log("LIGHTNING BOLT!");
+        Instantiate(LightningPrefab, LightningLaunchOffSet.position, transform.rotation);
+    }*/
 
     public void flex()
     {
@@ -52,7 +54,8 @@ public class VoiceCommand : MonoBehaviour
 
     public void headbutt()
     {
-        Debug.Log("HEADBUTT!!");
+        // Debug.Log("KICKKK!!");
+        Instantiate(kickPrefab, kickOffSet.position, transform.rotation);
     }
 
     /*private void Update()
