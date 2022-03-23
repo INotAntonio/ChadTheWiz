@@ -89,7 +89,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1532}
+      Script: {instanceID: 1534}
     - Class: 114
       Script: {instanceID: 1816}
     - Class: 114
@@ -162,7 +162,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1532}
+      Script: {instanceID: 1534}
     - Class: 114
       Script: {instanceID: 1548}
     - Class: 114
@@ -378,7 +378,7 @@ ScriptsOnlyBuild:
     className: TextMeshSpawner
   - hash:
       serializedVersion: 2
-      Hash: 3ec795e684115eec0e5ee335f5eea42e
+      Hash: 7fb33bf5681fd9d4a816950cf7f7ea67
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: pauseMenu

@@ -32,7 +32,10 @@ public class moveforward : MonoBehaviour
 
     private void Update()
     {
-        transform.position += new Vector3(-speed, 0, 0);
+        if(!pauseMenu.isPaused)
+        {
+            transform.position += new Vector3(-speed, 0, 0);
+        }
     }
 
 }
